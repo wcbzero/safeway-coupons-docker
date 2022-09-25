@@ -7,10 +7,10 @@ import email
 import http.client
 import urllib
 
-pushover_domain = os.environ('PUSHOVER_DOMAIN', 'api.pushover.net')
-pushover_port = os.environ('PUSHOVER_PORT', '443')
-pushover_user = os.environ('PUSHOVER_USER')
-pushover_api_token = os.environ('PUSHOVER_API_TOKEN')
+pushover_domain = os.environ.get('PUSHOVER_DOMAIN', 'api.pushover.net')
+pushover_port = os.environ.get('PUSHOVER_PORT', '443')
+pushover_user = os.environ.get('PUSHOVER_USER')
+pushover_api_token = os.environ.get('PUSHOVER_API_TOKEN')
 
 mail = email.message_from_string(stdin.read())
 title = "Message from Sendmail-Pushover"
